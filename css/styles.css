@@ -1,0 +1,260 @@
+:root {
+    --dark-bg: #121212;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --accent: #64ffda;
+    --section-padding: 3rem 0;
+    --content-width: 1000px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Section styling */
+section {
+    padding: var(--section-padding);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+section .container {
+    flex: 1;
+}
+
+.section-title {
+    width: 150px;
+    padding-left: 2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    opacity: 0.9;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+
+.intro-content {
+    max-width: 800px;
+}
+
+.intro-tagline {
+    color: var(--accent);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.intro-tagline b {
+    font-weight: 600;
+}
+
+/* Projects */        
+.project-item {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+    color: var(--text-primary);
+}
+
+.project-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+    color: var(--text-primary);
+}        
+
+.project-item a {
+    font-weight: 300;
+    color: var(--accent);
+}
+
+/* Gallery */
+
+.gallery-section {
+    margin-bottom: 5rem;
+}
+
+.gallery-thumbnail {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-thumbnail:hover {
+    transform: scale(1.02);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.prev-slide {
+    left: 20px;
+}
+
+.next-slide {
+    right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .project-item h3 {
+        font-size: 1.5rem;
+    }
+    
+    section {
+        flex-direction: column; 
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+    
+    .section-title {
+        width: 100%;
+        padding-left: 2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 3rem;
+    }
+}

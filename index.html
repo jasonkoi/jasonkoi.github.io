@@ -1,1 +1,87 @@
-Hello world!
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Developer Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <script type="text/javascript" src="js/lightbox.js"></script>
+    </head>
+    <body>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <div class="section-title">About</div>
+            <div class="container">
+                <div class="intro-content">
+                    <p class="intro-tagline"><b>Jason Koi</b>, Full-Stack Developer</p>
+                    <p>For the past 15 years, I have enjoyed designing, developing, and maintaining web solutions for a wide range of clients. This includes corporate sites for high-profile companies, complex ecommerce systems integrating with external marketplaces and product suppliers, and a custom platform for travel insurance quoting, sales, administration, and policy issuance.</p>
+                    <p>Several years ago, underwhelmed by the bloat and performance of most CMS platforms, my partner and I decided to build our own foundational platform, coding with intentionality and focusing on maximizing performance efficiency. On top of being an immensely enjoyable process, this framework, codenamed <i><b>Cue</b></i>, allowed us to build complex business solutions for clients at an efficiency that would not have been possible otherwise. It also powers most of the sites you will visit today.</p>
+                    <p>My approach emphasizes maintainable code, responsive design, and performance optimization. I believe that clean, intuitive design goes hand-in-hand with thoughtful development and strive for both of these in my work.</p>
+                    <p>Below you will find a small sampling of projects that I have worked on over the years, from the <i>large and complex</i> to the <i>small passion project</i>. Thank you for looking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="section-title">Projects</div>
+            <div class="container">
+                <div class="projects-list">
+                    <div class="project-item">
+                        <h3 class="project-title">GoReady Insurance</h3>
+                        <h4 class="project-url"><a href="https://goreadyinsurance.com" target=_blank>goreadyinsurance.com</a></h4>
+                        <p>The <b>GoReady Insurance</b> website nicely encapsulates the type of work that I have been doing for the past 10 years. I was responsible for the entire design and development of the public-facing site as well as the development of many of the systems within.</p>
+                        <p>Under the hood, this site runs on our custom PHP framework, <i>Cue</i>, and is packed with functionality for quoting, product managment, purchasing (including third-party purchasing via API), policy issuance, opportunity tracking and managment, claim managment, an internal task managment system, and content managment.</p>
+                        <p><b>Note:</b> Branding and brand colors were not part of this project.</p>
+                    </div>
+                                    
+                    <div class="project-item">
+                        <h3 class="project-title">Madison Social</h3>
+                        <h4 class="project-url"><a href="https://madisconsocial.com" target=_blank>madisonsocial.com</a></h4>
+                        <p><b>Madison Social</b> is a bar and restaurant based in Tallahassee, FL and represents one of the earliest design and development projects that I have worked on that is still available online. This site runs on an earlier incarnation of the <i>Cue</i> framework.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <h3 class="project-title">Sugar Creek Foods</h3>
+                        <h4 class="project-url"><a href="https://getsugarcreek.com" target=_blank>getsugarcreek.com</a></h4>
+                        <p>Sugar Creek Foods is a nice example of a brochure-style site that I designed and developed for one of our smaller clients. Also built on <i>Cue</i>, it includes content managment and ecommerce functionality.</i></p>
+                    </div>
+
+                    <div class="project-item">
+                        <h3 class="project-title">Mother Maker</h3>
+                        <h4 class="project-url"><a href="https://mothermaker.co" target=_blank>mothermaker.co</a></h4>
+                        <p><b>Mother Maker</b> is a passion project that I helped create for my wife shortly after the birth of our son. Also built on the <i>Cue</i> framework, I include it here just as an example of good, clean blog and article design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="section-title">Gallery</div>
+            <div class="container">
+                <div class="gallery-container">
+                    <!-- Gallery 1 -->
+                    <div class="gallery-section">
+                        <img src="img/01.jpg" alt="E-commerce Project" class="gallery-thumbnail" onclick="openLightbox(0, 0)">
+                        <p>While my portfolio highlights public-facing websites I've developed, the majority of my expertise lies in crafting robust back-end solutions and administrative systems that power these experiences behind the scenes. I've compiled this gallery showcasing select screenshots of the custom admin interfaces and management tools I've built within the <i>Cue</i> framework.</p>
+                    </div>                
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+                <div class="prev-slide" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></div>
+                <img src="" alt="Lightbox Image" class="lightbox-image" id="lightbox-img">
+                <div class="next-slide" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </body>
+</html>
